@@ -1,0 +1,12 @@
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\INTERFACEClassLibrary\INTERFACEClassLibrary\bin\Debug\INTERFACEClassLibrary.dll
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\INTERFACEClassLibrary\INTERFACEClassLibrary\bin\Debug\INTERFACEClassLibrary.pdb
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\INTERFACEClassLibrary\INTERFACEClassLibrary\obj\Debug\INTERFACEClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\INTERFACEClassLibrary\INTERFACEClassLibrary\obj\Debug\INTERFACEClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\INTERFACEClassLibrary\INTERFACEClassLibrary\obj\Debug\INTERFACEClassLibrary.dll
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\INTERFACEClassLibrary\INTERFACEClassLibrary\obj\Debug\INTERFACEClassLibrary.pdb
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\II-DONEM-UYG.-ASAMA-1\ders2-INTERFACEClassLibrary\INTERFACEClassLibrary\bin\Debug\INTERFACEClassLibrary.dll
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\II-DONEM-UYG.-ASAMA-1\ders2-INTERFACEClassLibrary\INTERFACEClassLibrary\bin\Debug\INTERFACEClassLibrary.pdb
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\II-DONEM-UYG.-ASAMA-1\ders2-INTERFACEClassLibrary\INTERFACEClassLibrary\obj\Debug\INTERFACEClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\II-DONEM-UYG.-ASAMA-1\ders2-INTERFACEClassLibrary\INTERFACEClassLibrary\obj\Debug\INTERFACEClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\II-DONEM-UYG.-ASAMA-1\ders2-INTERFACEClassLibrary\INTERFACEClassLibrary\obj\Debug\INTERFACEClassLibrary.dll
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\II-DONEM-UYG.-ASAMA-1\ders2-INTERFACEClassLibrary\INTERFACEClassLibrary\obj\Debug\INTERFACEClassLibrary.pdb
