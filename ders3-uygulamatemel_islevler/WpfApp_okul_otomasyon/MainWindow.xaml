@@ -1,0 +1,516 @@
+﻿<Window x:Class="WpfApp_okul_otomasyon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_okul_otomasyon"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <TabControl Margin="10,10,10.333,9.667">
+            <TabItem x:Name="TabItem_ogrenciler" Header="ÖGRENCİLER" FontStyle="Italic" FontSize="16" FontFamily="Tw Cen MT" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="65*"/>
+                        <ColumnDefinition Width="35*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Dgrid_ogrenciler" Margin="10,48,9.667,9.667" CanUserAddRows="False" AutoGeneratingColumn="Dgrid_ogrenciler_AutoGeneratingColumn">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn ClipboardContentBinding="{x:Null}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="Btn_ogrenci_sil" Content="Sil" Width="25" BorderBrush="{x:Null}" Foreground="#FF900808" FontSize="14" FontStyle="Italic" FontWeight="Normal" Click="Btn_ogrenci_sil_Click" Background="{x:Null}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Margin="0,10,9.667,0" Orientation="Horizontal" Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="252">
+                        <Button x:Name="Btn_ogrenci_sifirla" Content="Sıfırla" HorizontalAlignment="Left" Margin="0,0,0,4.333" Width="53" Click="Btn_ogrenci_sifirla_Click" />
+                        <Label Content="SINIF" FontWeight="Bold"/>
+
+                        <ComboBox x:Name="Cbox_ogr_sinif1" Width="143" SelectionChanged="Cbox_ogr_sinif1_SelectionChanged"/>
+
+                    </StackPanel>
+                    <Border Grid.Column="1" Margin="10.333,10,0,0" Height="503" VerticalAlignment="Top" HorizontalAlignment="Left" Width="258" BorderThickness="1" >
+                        <Border.Effect>
+                            <DropShadowEffect/>
+                        </Border.Effect>
+                        <StackPanel Background="#FFD7E7F3" Margin="0,0,0,0.333">
+                            <CheckBox x:Name="CheckBox_ogrenci_yeni" Content="YENİ KAYIT" VerticalAlignment="Center" Height="23" FontWeight="Bold" Margin="46,20,37,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                            <Grid Grid.Column="1" Height="26" Margin="10,2,10,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="OKUL NO" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="14"/>
+                                <TextBox x:Name="Tbox_ogr_okulno" TextWrapping="Wrap" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="91,0,0,0" FontWeight="Bold" FontSize="12" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="AD" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_ogr_ad" TextWrapping="Wrap" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="91,0,0.333,0" FontWeight="Bold" FontSize="12" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="SOYAD" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_ogr_soyad" TextWrapping="Wrap" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="91,0,0.333,0" FontWeight="Bold" FontSize="12" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="TC" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_ogr_tc" TextWrapping="Wrap" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="91,0,0.333,0" FontWeight="Bold" FontSize="12" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="SINIF" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <ComboBox x:Name="Cbox_ogr_sinif" Margin="91,0,0.333,2" Grid.ColumnSpan="2" FontWeight="Bold"/>
+
+                            </Grid>
+                            <Button x:Name="Btn_ogr_kaydet" Content="KAYDET" VerticalAlignment="Top" Margin="27,5,30,0" Height="26" FontWeight="Bold" Click="Btn_ogr_kaydet_Click">
+                                <Button.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF3EC2DF"/>
+                                        <GradientStop Color="#FF85DFE8" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItem_Notlar" Header="NOTLAR" FontStyle="Italic" FontSize="16" FontFamily="Tw Cen MT" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="65*"/>
+                        <ColumnDefinition Width="35*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Dgrid_notlar" Margin="10,48,9.667,9.667" CanUserAddRows="False" AutoGeneratingColumn="Dgrid_notlar_AutoGeneratingColumn">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn ClipboardContentBinding="{x:Null}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="Btn_not_sil" Content="Sil" Width="25" BorderBrush="{x:Null}" Foreground="#FF900808" FontSize="14" FontStyle="Italic" FontWeight="Normal" Click="Btn_not_sil_Click" Background="{x:Null}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Margin="0,10,9.667,0" Orientation="Horizontal" Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="479">
+
+                        <Button x:Name="Btn_not_sifirla" Content="Sıfırla" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="53" Click="Btn_not_sifirla_Click" />
+                        <Label Content="DERS" FontWeight="Bold"/>
+
+                        <ComboBox x:Name="Cbox_not_ders" Width="143" SelectionChanged="Cbox_not_ders_SelectionChanged" Height="25" Margin="0,0,0,0.333" VerticalAlignment="Bottom"/>
+                        <Label Content="SINIF" FontWeight="Bold"/>
+                        <ComboBox x:Name="Cbox_not_sinif" Width="63" Margin="0,0,0,0.333" SelectionChanged="Cbox_not_sinif_SelectionChanged"/>
+                        <Label Content="DÖNEM" FontWeight="Bold"/>
+                        <ComboBox x:Name="Cbox_not_donem" Width="27" Margin="0,1,0,0" HorizontalAlignment="Center" Height="23" VerticalAlignment="Top" SelectionChanged="Cbox_not_donem_SelectionChanged">
+                            <ComboBoxItem Content="I" IsSelected="True" HorizontalContentAlignment="Center"/>
+                            <ComboBoxItem Content="II" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <Border Grid.Column="1" Margin="10.333,10,0,0" Height="503" VerticalAlignment="Top" HorizontalAlignment="Left" Width="258" Background="#FF1B1919" BorderThickness="1,1,0,1" BorderBrush="Black" >
+                        <Border.Effect>
+                            <DropShadowEffect/>
+                        </Border.Effect>
+                        <StackPanel Background="#FFBED497" Margin="0,0,0,0.333">
+                            <CheckBox x:Name="CheckBox_not_yeni" Content="YENİ KAYIT" VerticalAlignment="Center" Height="23" FontWeight="Bold" Margin="46,20,37,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="OKUL NO" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <ComboBox x:Name="Cbox_not_okulno" Margin="91,0,0.333,2" Grid.ColumnSpan="2" FontWeight="Bold" SelectionChanged="Cbox_not_okulno_SelectionChanged"/>
+
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10,2,10,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="SINIF" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="14"/>
+                                <Label x:Name="Lbl_not_sinif" Content="..." Grid.Column="1"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10,2,10,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="AD" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="14"/>
+                                <Label x:Name="Lbl_not_ograd" Content="..." Grid.Column="1"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10,2,10,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="SOYAD" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="14"/>
+                                <Label x:Name="Lbl_not_ogrsoyad" Content="..." Grid.Column="1"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="18*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="NOT-1-" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_not_1" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="9.667,0,0.333,0" FontWeight="Bold" FontSize="12" Grid.Column="1" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="18*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="NOT-2-" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_not_2" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="9.667,0,0.333,0" FontWeight="Bold" FontSize="12" Grid.Column="1" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="18*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="NOT-3-" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_not_3" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="9.667,0,0.333,0" FontWeight="Bold" FontSize="12" Grid.Column="1" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="18*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="PROJE" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_not_proje" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="9.667,0,0.333,0" FontWeight="Bold" FontSize="12" Grid.Column="1" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="18*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="PERFORMANS-1-" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_performans_1" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="9.667,0,0.333,0" FontWeight="Bold" FontSize="12" Grid.Column="1" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="18*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="PERFORMANS-2-" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_performans_2" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="9.667,0,0.333,0" FontWeight="Bold" FontSize="12" Grid.Column="1" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="18*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="PERFORMANS-3-" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_performans_3" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="9.667,0,0.333,0" FontWeight="Bold" FontSize="12" Grid.Column="1" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Button x:Name="Btn_not_kaydet" Content="KAYDET" VerticalAlignment="Top" Margin="27,5,30,0" Height="26" FontWeight="Bold" Click="Btn_not_kaydet_Click" RenderTransformOrigin="0.501,0.5">
+                                <Button.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF3EC2DF"/>
+                                        <GradientStop Color="#FF85DFE8" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+
+                        </StackPanel>
+                    </Border>
+                    
+                </Grid>
+            </TabItem>
+            <TabItem Header="DERS PROGRAMI" FontSize="16" FontFamily="Tw Cen MT" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="65*"/>
+                        <ColumnDefinition Width="35*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Dgrid_dersprogramlari" Margin="10,48,9.667,9.667" CanUserAddRows="False" AutoGeneratingColumn="Dgrid_dersprogramlari_AutoGeneratingColumn">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn ClipboardContentBinding="{x:Null}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="Btn_dersprogrami_sil" Content="Sil" Width="25" BorderBrush="{x:Null}" Foreground="#FF900808" FontSize="14" FontStyle="Italic" FontWeight="Normal" Click="Btn_dersprogrami_sil_Click" Background="{x:Null}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Margin="0,10,9.667,0" Orientation="Horizontal" Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="479">
+                        <Button x:Name="Btn_dp_sifirla" Content="Sıfırla" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="53" Click="Btn_dp_sifirla_Click"/>
+                        <Label Content="GÜN" FontWeight="Bold"/>
+
+                        <ComboBox x:Name="Cbox_dp_gun" Width="143" SelectionChanged="Cbox_dp_gun_SelectionChanged">
+                            <ComboBoxItem Content="Pazartesi" HorizontalAlignment="Left" Width="140.666666666667" IsSelected="True"/>
+                            <ComboBoxItem Content="Salı" HorizontalAlignment="Left" Width="140.666666666667"/>
+                            <ComboBoxItem Content="Çarşamba" HorizontalAlignment="Left" Width="140.666666666667"/>
+                            <ComboBoxItem Content="Perşembe" HorizontalAlignment="Left" Width="140.666666666667"/>
+                            <ComboBoxItem Content="Cuma" HorizontalAlignment="Left" Width="140.666666666667"/>
+                            <ComboBoxItem Content="Cumartesi" HorizontalAlignment="Left" Width="140.666666666667"/>
+                            <ComboBoxItem Content="Pazar" HorizontalAlignment="Left" Width="140.666666666667"/>
+
+                        </ComboBox>
+                        <Label Content="SINIF" FontWeight="Bold"/>
+                        <ComboBox x:Name="Cbox_dp_sinif" Width="143" SelectionChanged="Cbox_dp_sinif_SelectionChanged"/>
+                    </StackPanel>
+                    <Border Grid.Column="1" Margin="10.333,10,0,0" Height="503" VerticalAlignment="Top" HorizontalAlignment="Left" Width="258" Background="Black" BorderThickness="1" BorderBrush="Black" >
+                        <Border.Effect>
+                            <DropShadowEffect/>
+                        </Border.Effect>
+                        <StackPanel Background="#FFF3D7D7" Margin="0,0,0,0.333">
+                            <CheckBox x:Name="CheckBox_dersprogrami_yeni" Content="YENİ KAYIT" VerticalAlignment="Center" Height="23" FontWeight="Bold" Margin="46,20,37,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="GÜN" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <ComboBox x:Name="Cbox_dp_gun_sag" Margin="91,0,0.333,2" Grid.ColumnSpan="2" FontWeight="Bold">
+                                    <ComboBoxItem Content="Pazartesi" HorizontalAlignment="Left" Width="140.666666666667" IsSelected="True"/>
+                                    <ComboBoxItem Content="Salı" HorizontalAlignment="Left" Width="140.666666666667"/>
+                                    <ComboBoxItem Content="Çarşamba" HorizontalAlignment="Left" Width="140.666666666667"/>
+                                    <ComboBoxItem Content="Perşembe" HorizontalAlignment="Left" Width="140.666666666667"/>
+                                    <ComboBoxItem Content="Cuma" HorizontalAlignment="Left" Width="140.666666666667"/>
+                                    <ComboBoxItem Content="Cumartesi" HorizontalAlignment="Left" Width="140.666666666667"/>
+                                    <ComboBoxItem Content="Pazar" HorizontalAlignment="Left" Width="140.666666666667"/>
+                                </ComboBox>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="SAAT" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <ComboBox x:Name="Cbox_dp_saat" Margin="91,0,0.333,2" Grid.ColumnSpan="2" FontWeight="Bold">
+                                    <ComboBoxItem Content="1" HorizontalAlignment="Left" Width="144" IsSelected="True"/>
+                                    <ComboBoxItem Content="2" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="3" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="4" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="5" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="6" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="7" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="8" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="9" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="10" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="11" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="12" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="13" HorizontalAlignment="Left" Width="144"/>
+                                    <ComboBoxItem Content="14" HorizontalAlignment="Left" Width="144"/>
+                                </ComboBox>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="SINIF" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <ComboBox x:Name="Cbox_dp_sinif_sag" Margin="91,0,0.333,2" Grid.ColumnSpan="2" FontWeight="Bold"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="DERS" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <ComboBox x:Name="Cbox_dp_ders" Margin="91,0,0.333,2" Grid.ColumnSpan="2" FontWeight="Bold"/>
+                            </Grid>
+
+
+
+                            <Button x:Name="Btn_dp_kaydet" Content="KAYDET" VerticalAlignment="Top" Margin="27,5,30,0" Height="26" FontWeight="Bold" Click="Btn_dp_kaydet_Click">
+                                <Button.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF3EC2DF"/>
+                                        <GradientStop Color="#FF85DFE8" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+
+                        </StackPanel>
+                    </Border>
+                    
+                </Grid>
+            </TabItem>
+            <TabItem Header="ÖGRETMENLER" FontSize="16" FontFamily="Tw Cen MT" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="65*"/>
+                        <ColumnDefinition Width="35*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid Margin="10,48,9.667,9.667" x:Name="Dgrid_ogretmenler" CanUserAddRows="False" AutoGeneratingColumn="Dgrid_ogretmenler_AutoGeneratingColumn">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn ClipboardContentBinding="{x:Null}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="Btn_ogretmen_sil" Content="Sil" Width="25" BorderBrush="{x:Null}" Foreground="#FF900808" FontSize="14" FontStyle="Italic" FontWeight="Normal" Click="Btn_ogretmen_sil_Click" Background="{x:Null}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Margin="0,10,9.667,0" Orientation="Horizontal" Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="315">
+                        <Label Content="BRANS" FontWeight="Bold"/>
+
+                        <ComboBox x:Name="Cbox_ogrt_brans_ust" Width="246" Margin="0,0,0,0.333" SelectionChanged="Cbox_ogrt_brans_ust_SelectionChanged"/>
+
+
+                    </StackPanel>
+                    <Border Grid.Column="1" Margin="10.333,10,0,0" Height="503" VerticalAlignment="Top" HorizontalAlignment="Left" Width="258" BorderThickness="1" BorderBrush="Black" >
+                        <Border.Effect>
+                            <DropShadowEffect/>
+                        </Border.Effect>
+                        <StackPanel Background="#FFD7E7F3" Margin="0,0,0,0.333">
+                            <CheckBox x:Name="CheckBox_ogretmen_yeni" Content="YENİ KAYIT" VerticalAlignment="Center" Height="23" FontWeight="Bold" Margin="46,20,37,10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="AD" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_ogrt_ad" TextWrapping="Wrap" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="91,0,0.333,0" FontWeight="Bold" FontSize="12" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="SOYAD" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_ogrt_soyad" TextWrapping="Wrap" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="91,0,0.333,0" FontWeight="Bold" FontSize="12" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="TC" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <TextBox x:Name="Tbox_ogrt_tc" TextWrapping="Wrap" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="91,0,0.333,0" FontWeight="Bold" FontSize="12" CharacterCasing="Upper"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Height="26" Margin="10.333,2,10.333,0" VerticalAlignment="Top">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="13*"/>
+                                    <ColumnDefinition Width="18*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="BRANS" Margin="10,0,10,2" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                                <ComboBox x:Name="Cbox_ogrt_brans" Margin="91,0,0.333,2" Grid.ColumnSpan="2" FontWeight="Bold"/>
+
+                            </Grid>
+                            <Button x:Name="Btn_ogrt_kaydet" Content="KAYDET" VerticalAlignment="Top" Margin="27,5,30,0" Height="26" FontWeight="Bold" Click="Btn_ogrt_kaydet_Click">
+                                <Button.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF3EC2DF"/>
+                                        <GradientStop Color="#FF85DFE8" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+
+                        </StackPanel>
+                    </Border>
+                    <Button x:Name="Btn_ogrt_sifirla" Content="Sıfırla" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="53" Click="Btn_ogrt_sifirla_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="DERSLER" FontSize="16" FontFamily="Tw Cen MT" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Dgrid_dersler" Margin="10,48,10.333,9.333" CanUserAddRows="False" AutoGeneratingColumn="Dgrid_dersler_AutoGeneratingColumn">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn ClipboardContentBinding="{x:Null}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="Btn_ders_sil" Content="Sil" Width="25" BorderBrush="{x:Null}" Foreground="#FF900808" FontSize="14" FontStyle="Italic" FontWeight="Normal" Click="Btn_ders_sil_Click" Background="{x:Null}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Border Margin="10,10,10.333,0" Height="38" VerticalAlignment="Top" BorderThickness="1" BorderBrush="Black" >
+                        <StackPanel Background="#FFD7E7F3" Orientation="Horizontal" Margin="0,0,0.333,0">
+
+                            <CheckBox x:Name="CheckBox_ders_yeni" Content="YENİ KAYIT" FontWeight="Bold" Margin="0,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Padding="4,0,0,0"/>
+
+                            <Label Content="DERS AD" Margin="10,0,9.333,0" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                            <TextBox x:Name="Tbox_ders_ad" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="1.667,5,0,0" FontWeight="Bold" FontSize="12" Grid.Column="1" Height="25" VerticalAlignment="Top" Width="199" CharacterCasing="Upper"/>
+                            <Button x:Name="Btn_ders_kaydet" Content="KAYDET" Margin="0,5,0,6" FontWeight="Bold" Width="89" Click="Btn_ders_kaydet_Click">
+                                <Button.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF3EC2DF"/>
+                                        <GradientStop Color="#FF85DFE8" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+
+
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="SINIFLAR" FontSize="16" FontFamily="Tw Cen MT" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="Dgrid_siniflar" Margin="10,48,9.333,9.333" CanUserAddRows="False" AutoGeneratingColumn="Dgrid_siniflar_AutoGeneratingColumn">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" DisplayIndex="0">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="Btn_sinif_sil" Content="Sil" Width="25" BorderBrush="{x:Null}" Foreground="#FF900808" FontSize="14" FontStyle="Italic" FontWeight="Normal" Click="Btn_sinif_sil_Click" Background="{x:Null}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Border Margin="10,10,9.333,0" Height="38" VerticalAlignment="Top" BorderBrush="#FF0E0E0E" BorderThickness="1" >
+                        <StackPanel Background="#FFBACDDE" Orientation="Horizontal">
+
+                            <CheckBox x:Name="CheckBox_sinif_yeni" Content="YENİ KAYIT" FontWeight="Bold" Margin="0,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Padding="4,0,0,0"/>
+                            <Label Content="SEVİYE" Margin="10,0,9.333,0" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                            <ComboBox x:Name="Cbox_sinif_seviye" Width="78" Margin="0,5,0,8">
+                                <ComboBoxItem Content="Hazırlık" HorizontalAlignment="Left" Width="92" IsSelected="True"/>
+                                <ComboBoxItem Content="1" HorizontalAlignment="Left" Width="92"/>
+                                <ComboBoxItem Content="2" HorizontalAlignment="Left" Width="92"/>
+                                <ComboBoxItem Content="3" HorizontalAlignment="Left" Width="92"/>
+                                <ComboBoxItem Content="4" HorizontalAlignment="Left" Width="92"/>
+                                <ComboBoxItem Content="5" HorizontalAlignment="Left" Width="92"/>
+                                <ComboBoxItem Content="6" HorizontalAlignment="Left" Width="92"/>
+                                <ComboBoxItem Content="7" HorizontalAlignment="Left" Width="92"/>
+                                <ComboBoxItem Content="8" HorizontalAlignment="Left" Width="92"/>
+                                <ComboBoxItem Content="9" HorizontalAlignment="Left" Width="92"/>
+                                <ComboBoxItem Content="10" HorizontalAlignment="Left" Width="92"/>
+                                <ComboBoxItem Content="11" HorizontalAlignment="Left" Width="92"/>
+                                <ComboBoxItem Content="12" HorizontalAlignment="Left" Width="92"/>
+                            </ComboBox>
+                            <Label Content="SUBE" Margin="10,0,9.333,0" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                            <TextBox x:Name="Tbox_sinif_sube" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="1.667,5,0,0" FontWeight="Bold" FontSize="12" Height="25" VerticalAlignment="Top" Width="93" CharacterCasing="Upper"/>
+                            <Button x:Name="Btn_sinif_kaydet" Content="KAYDET" VerticalAlignment="Top" Margin="0,5,0,0" Height="25" FontWeight="Bold" Width="89" Click="Btn_sinif_kaydet_Click">
+                                <Button.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF3EC2DF"/>
+                                        <GradientStop Color="#FF85DFE8" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

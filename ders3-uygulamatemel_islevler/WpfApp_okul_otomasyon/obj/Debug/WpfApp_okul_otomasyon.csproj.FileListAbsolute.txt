@@ -1,0 +1,32 @@
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\bin\Debug\WpfApp_okul_otomasyon.exe.config
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\bin\Debug\WpfApp_okul_otomasyon.exe
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\bin\Debug\WpfApp_okul_otomasyon.pdb
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.csprojResolveAssemblyReference.cache
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\MainWindow.g.cs
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\App.g.cs
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon_MarkupCompile.cache
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon_MarkupCompile.lref
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\MainWindow.baml
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.g.resources
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.Properties.Resources.resources
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.csproj.GenerateResource.Cache
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.csproj.CoreCompileInputs.cache
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.exe
+C:\Users\ozgeh\Documents\Visual Studio 2017\Projects\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.pdb
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\bin\Debug\WpfApp_okul_otomasyon.exe.config
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\bin\Debug\WpfApp_okul_otomasyon.exe
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\bin\Debug\WpfApp_okul_otomasyon.pdb
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.csprojResolveAssemblyReference.cache
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\MainWindow.g.cs
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\App.g.cs
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon_MarkupCompile.cache
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon_MarkupCompile.lref
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\MainWindow.baml
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.g.resources
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.Properties.Resources.resources
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.csproj.GenerateResource.Cache
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.csproj.CoreCompileInputs.cache
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.exe
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\obj\Debug\WpfApp_okul_otomasyon.pdb
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\bin\Debug\INTERFACEClassLibrary.dll
+C:\Users\ozgeh\Desktop\NESNEDERS\2018-NESNETABANLIDERSLERI\II_DONEM\WpfApp_okul_otomasyon\WpfApp_okul_otomasyon\bin\Debug\INTERFACEClassLibrary.pdb
